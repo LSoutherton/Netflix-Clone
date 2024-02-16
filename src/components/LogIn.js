@@ -53,7 +53,7 @@ const LogIn = () => {
   });
 
   return (
-    <div className={screenSize ? 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-rows-4 h-fit w-7/12' : 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-rows-4 h-fit w-3/12'}>
+    <div className={screenSize ? 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-rows-4 max-h-3/4 w-7/12' : 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-rows-4 h-fit w-3/12'}>
         <img className='w-96' src='https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png' />
         <div className='row-span-3 grid grid-rows-3 mt-5'>
             <input value={email} onChange={e => setEmail(e.target.value)} className='h-14 text-neutral-400 text-lg m-auto w-full mb-1 rounded-tr rounded-tl bg-neutral-700 pl-2 placeholder:text-lg' type='text' placeholder='Email' />

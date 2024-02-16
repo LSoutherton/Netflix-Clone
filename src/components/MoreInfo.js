@@ -76,7 +76,7 @@ const MoreInfo = () => {
         <div className='text-white text-2xl ml-2 font-bold border-t-4 pt-1 mt-1 border-red-600 inline-block'>
           Recomended
         </div>
-        <div className='mb-4 w-fit'>
+        <div className='mb-4 w-fit text-center'>
           {recomended}
         </div>
       </div>

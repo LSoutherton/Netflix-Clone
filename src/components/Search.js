@@ -32,7 +32,7 @@ const Search = ({ list }) => {
 
   const displayTrending = trending.map((movie) => {
     return (
-        <Link className='grid grid-cols-6 p-1 pl-2 pr-2'>
+        <Link to='/More' state={{movie: movie, list: list}} className='grid grid-cols-6 p-1 pl-2 pr-2'>
             <img key={movie.id} className={screenSize ? 'col-span-2 rounded' : 'col-span-1 rounded'} src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} />
             <div className={screenSize ? 'col-span-3 text-white flex m-auto ml-4 font-semibold text-base' : 'col-span-4 text-white flex m-auto ml-4 font-semibold text-2xl'}>
                 {movie.title}
@@ -61,9 +61,9 @@ const Search = ({ list }) => {
     }
     return list.filter((movie) => {
         if (movie.title) {
-            return (movie.title.toLowerCase()).includes(input)
+            return (movie.title.toLowerCase()).includes(input.toLowerCase())
         } else {
-            return (movie.name.toLowerCase()).includes(input)
+            return (movie.name.toLowerCase()).includes(input.toLowerCase())
         }
     })
   }
