@@ -52,3 +52,7 @@ body::-webkit-scrollbar {
 .top-42 {
   top: 42%;
 }
+
+.h-logIn {
+  height: 364px;
+}
