@@ -6,8 +6,8 @@ import { logIn } from '../features/userSlice'
 
 const LogIn = () => {
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('example@defaultaccount.com');
+  const [password, setPassword] = useState('tester');
   const dispatch = useDispatch();
 
   const register = () => {
@@ -56,12 +56,11 @@ const LogIn = () => {
     <div className={screenSize ? 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-rows-4 h-logIn w-7/12' : 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-rows-4 h-fit w-3/12'}>
         <img className='w-96' src='https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png' />
         <div className='row-span-3 grid grid-rows-3 mt-5'>
-            <input value={email} onChange={e => setEmail(e.target.value)} className='h-14 text-neutral-400 text-lg m-auto w-full mb-1 rounded-tr rounded-tl bg-neutral-700 pl-2 placeholder:text-lg' type='text' placeholder='Email' />
-            <input value={password} onChange={e => setPassword(e.target.value)} className='h-14 rounded-br text-lg rounded-bl pl-2 placeholder:text-lg bg-neutral-700' type='password' placeholder='Password' />
+            <input value={email} onChange={e => setEmail(e.target.value)} defaultValue={email} className='h-14 text-neutral-400 text-lg m-auto w-full mb-1 rounded-tr rounded-tl bg-neutral-700 pl-2 placeholder:text-lg' type='text' placeholder='Email' />
+            <input value={password} onChange={e => setPassword(e.target.value)} defaultValue={password} className='h-14 rounded-br text-lg rounded-bl pl-2 placeholder:text-lg bg-neutral-700' type='password' placeholder='Password' />
             <button onClick={(e) => logInToApp(e)} className='h-14 border-2 border-neutral-700 mt-4 text-xl text-neutral-400 rounded-md' type='submit'>Sign In</button>
             <button onClick={register} className='h-14 bg-neutral-700 mt-4 text-xl text-neutral-400 rounded-md'>Register</button>
         </div>
-        
     </div>
   )
 }
