@@ -7,4 +7,4 @@ The front-end of this app was created with ReactJS along with Tailwind to create
   - Firebase was used for the backend which stores user log in data as well as any profiles that they have created.
   - Redux handles the logging in and out for the user which is a great way to handle this interaction whilst keeping the required code to a minimum.
 
-All of my projects are built mobile first and then resized for larger screens as rfom my experience, this is the most seemless way to handle responsive design.
+All of my projects are built mobile first and then resized for larger screens, as from my experience this is the most seemless way to handle responsive design.
